@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main>
+	<div class="wrapper">
+		<section class="character-page">
+			<div class="col-8">
+				<h2>{{ character.firstname }} {{ character.lastname }}</h2>
+				<div class="bio">
+					<h3>Biographie</h3>
+					<p>{{ character.biography }}</p>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="avatar" style="background: #e3e3e3;">
+					<img src="./Game of Thrones_files/catelyn.png" alt="Catelyn">
+				</div>
+				<div class="infos">
+					<h3>Maisons</h3>
+					<div class="houses">
+						<ul>
+							<li class="house-logo" style="background: #e3e3e3;">
+								<a href="#/house/1">
+									<img src="./Game of Thrones_files/stark.png" alt="Stark">
+								</a>
+							</li>
+							<li class="house-logo" style="background: #2b3aab;">
+								<a href="#/house/3">
+									<img src="./Game of Thrones_files/tully.png" alt="Tully">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="meta">
+						<li>
+							<span>Rang :
+							</span>
+							Lady</li>
+						<li>
+							<span>Mère :
+							</span>
+							Non renseigné
+						</li>
+						<li>
+							<span>Père :
+							</span>
+							Non renseigné
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+</main>
+{% endblock %}

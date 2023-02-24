@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<main>
+        <div class="wrapper">
+                
+   <ul class="characters-list">
+    
+             {% for character in allCharactersFromBdd %}
+        </li>
+            <li class="character-card">
+            <a href="{{ path('character_read', {'id' : character.id }) }}">        
+                <div class="avatar" style="background: #baa207;">
+                    <img src="{{ asset('assets/img/' ~ character.image) }}" alt="{{ character.firstname }} {{ character.lastname }}">
+                </div>
+                <div class="name">
+                    {{ character.firstname }} {{ character.lastname }}
+                </div>
+            </a>
+        </li>
+       {% endfor %}     
+    </ul>        </div>
+    </main>
+{% endblock %}
